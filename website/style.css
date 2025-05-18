@@ -21,6 +21,16 @@ body {
     justify-content: center;
 }
 
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white; /* Prevents transparency over content */
+    z-index: 1000;
+    padding: 1rem 0;
+}
+
 header h1 {
     font-size: 2rem;
     margin-top: 2rem;
@@ -30,6 +40,21 @@ header h1 {
 .timestamp {
     font-size: 13px;
     margin-bottom: 2rem;
+}
+
+main {
+    padding-top: 140px;  /* Height of header + some buffer */
+    padding-bottom: 60px; /* Height of footer + some buffer */
+}
+
+.tab {
+    width: 60px;
+    height: 425px;
+    border: 1px solid black;
+    border-radius:  20px;
+    background-image: linear-gradient(45deg, rgba(0,0,0,0.05));
+    background-size: 30px 30px;
+    background-position: 0 0, 15px 15px;
 }
 
 .tabs {
@@ -42,14 +67,14 @@ header h1 {
     margin-bottom: 3rem;
 }
 
-.tab {
-    width: 60px;
-    height: 425px;
-    border: 1px solid black;
-    border-radius:  20px;
-    background-image: linear-gradient(45deg, rgba(0,0,0,0.05));
-    background-size: 30px 30px;
-    background-position: 0 0, 15px 15px;
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    z-index: 1000;
+    padding: 0.5rem 0;
 }
 
 footer .center {
@@ -70,36 +95,6 @@ footer .center a {
 footer .center a:hover {
     background-color:   black;
     color: white;
-}
-
-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: white; /* Prevents transparency over content */
-    z-index: 1000;
-    padding: 1rem 0;
-}
-
-.timestamp {
-    font-size: 13px;
-    margin-bottom: 0.5rem;
-}
-
-footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-color: white;
-    z-index: 1000;
-    padding: 0.5rem 0;
-}
-
-main {
-    padding-top: 140px;  /* Height of header + some buffer */
-    padding-bottom: 60px; /* Height of footer + some buffer */
 }
 
 .about h4 {
