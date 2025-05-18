@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Open Tabs</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <header>
+        <h1>OPEN TABS</h1>
+        <div class="timestamp" id="timestamp"></div>
+    </header>
+
+    <main>
+        <div class="about">
+            <h4>About<br><br></h4>
+            <p>this site was built out of frustration and obsession — frustration with how little we’re taught about surviving, thriving, and owning ourselves in the real world, and obsession with becoming someone who can’t be fooled, broken, or ignored.<br>
+
+                at its core is a curated system of 15 essential life skills — from financial autonomy to emotional fluency, from boundary-setting to self-defense. not in theory, but in practice. every skill is paired with resources: books, videos, podcasts, essays — all free, all vetted.<br>
+
+                this project grew from the idea that knowledge is power, and power should be accessible. it’s for the ones who read between the lines, ask better questions, and build identities with intention.<br>
+
+                while rooted in personal evolution, this space expands into a wider movement — a digital rebellion against helplessness. no fluff, no guru talk. just tools for those who want to become sharp, sovereign, and unforgettable.
+
+                the goal? to help you become the kind of person who doesn’t just adapt to systems — you outgrow them.</p>
+        </div>
+    </main>
+
+    <footer>
+        <div class="center"><a href="all.html">all</a>&nbsp;&nbsp; <a href="about.html">about</a>&nbsp;&nbsp; <a href="author.html">author</a></div>
+    </footer>
+</div>
+
+<script>
+    function updateTimestamp() {
+        const now = new Date();
+        const options = {
+            day: '2-digit', month: '2-digit', year: 'numeric',
+            hour: '2-digit', minute: '2-digit', second: '2-digit',
+            hour12: true, timeZone: 'Asia/Kolkata'
+        };
+        const formatted = now.toLocaleString('en-GB', options).replace(',', '');
+        document.getElementById('timestamp').textContent = formatted + ' IST';
+    }
+
+    updateTimestamp(); // call once immediately
+    setInterval(updateTimestamp, 1000); // update every second
+</script>
+
+</body>
+</html>

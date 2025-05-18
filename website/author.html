@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Open Tabs</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <header>
+        <h1>OPEN TABS</h1>
+        <div class="timestamp" id="timestamp"></div>
+    </header>
+
+    <main>
+        <div class="author">
+            <h4>About the author<br><br></h4>
+            <p>
+                hi! i’m devanshi — researcher, writer, designer, full-stack developer, and chronic overthinker turned creative weapon.<br>
+
+                i build things on the internet that look good, work well, and say something. this project was born from my obsession with self-mastery and a refusal to coast through life on default settings. i believe knowledge is both armor and art — and i like turning it into things people actually want to read, learn, or use.<br>
+
+                i’ve got a thing for systems — breaking them, rebuilding them, understanding how they shape us. i read like a maniac, design like a storyteller, and write like i’m running out of time. when i’m not deep in a codebase or mid-rant about internet culture, you’ll probably find me making weirdly specific moodboards, dissecting meme evolution, or building brands with too much personality.<br>
+
+                i made this space because i couldn’t find one that did it all — something sharp, self-aware, funny, and actually useful. not “influencer wellness,” not productivity bro-core. just real tools, smart language, and a little bit of chaos.<br>
+
+                i’m currently based in india, building a creative life with clarity, curiosity, and just the right amount of rebellion.<br>
+
+                thanks for being here — let’s evolve loud.
+            </p>
+        </div>
+    </main>
+
+    <footer>
+        <div class="center"><a href="all.html">all</a>&nbsp;&nbsp; <a href="about.html">about</a>&nbsp;&nbsp; <a href="author.html">author</a></div>
+    </footer>
+</div>
+
+<script>
+    function updateTimestamp() {
+        const now = new Date();
+        const options = {
+            day: '2-digit', month: '2-digit', year: 'numeric',
+            hour: '2-digit', minute: '2-digit', second: '2-digit',
+            hour12: true, timeZone: 'Asia/Kolkata'
+        };
+        const formatted = now.toLocaleString('en-GB', options).replace(',', '');
+        document.getElementById('timestamp').textContent = formatted + ' IST';
+    }
+
+    updateTimestamp(); // call once immediately
+    setInterval(updateTimestamp, 1000); // update every second
+</script>
+
+</body>
+</html>
