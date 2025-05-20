@@ -26,7 +26,6 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: white; /* Prevents transparency over content */
     z-index: 1000;
     padding: 1rem 0;
 }
@@ -37,14 +36,26 @@ header h1 {
     margin-bottom: 0.5rem;
 }
 
+header h1 a {
+    text-decoration: none;
+    color: black;
+    padding: 2px 2px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+header h1 a:hover {
+    background-color:   transparent;
+    color: black;
+}
+
 .timestamp {
     font-size: 13px;
     margin-bottom: 2rem;
 }
 
 main {
-    padding-top: 140px;  /* Height of header + some buffer */
-    padding-bottom: 60px; /* Height of footer + some buffer */
+    padding-top: 140px;
+    padding-bottom: 60px;
 }
 
 .tab {
@@ -72,7 +83,6 @@ footer {
     bottom: 0;
     left: 0;
     width: 100%;
-    background-color: white;
     z-index: 1000;
     padding: 0.5rem 0;
 }
@@ -108,8 +118,8 @@ footer .center a:hover {
 .about p {
     text-align: justify;
     font-size: 13px;
-    max-width: 700px;  /* or any width you prefer */
-    margin: 0 auto;     /* centers the paragraph */
+    max-width: 700px;
+    margin: 0 auto;
     line-height: 1rem;
 }
 
@@ -124,8 +134,8 @@ footer .center a:hover {
 .author p {
     text-align: justify;
     font-size: 13px;
-    max-width: 700px;  /* or any width you prefer */
-    margin: 0 auto;     /* centers the paragraph */
+    max-width: 700px;
+    margin: 0 auto;
     line-height: 1rem;
 }
 
